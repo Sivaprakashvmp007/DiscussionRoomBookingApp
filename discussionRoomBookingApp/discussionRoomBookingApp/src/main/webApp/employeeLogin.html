@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+		}
+		.container {
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			box-shadow: 0 0 10px #ccc;
+			margin: 100px auto;
+			max-width: 400px;
+			padding: 20px;
+			text-align: center;
+		}
+		h1 {
+			color: #333;
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+		input[type=email], input[type=password] {
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+			padding: 10px;
+			width: 100%;
+		}
+		button[type=submit] {
+			background-color: blue;
+			border: none;
+			border-radius: 4px;
+			color: #fff;
+			cursor: pointer;
+			margin-top: 10px;
+			padding: 12px 20px;
+			width: 100%;
+		}
+		button[type=submit]:hover {
+			background-color: #45a049;
+		}
+		.cancelbtn {
+			background-color: #f44336;
+			border: none;
+			border-radius: 4px;
+			color: #fff;
+			cursor: pointer;
+			margin-top: 10px;
+			padding: 12px 20px;
+			width: 100%;
+		}
+		.cancelbtn:hover {
+			background-color: #dc3545;
+		}
+		.register {
+			color: #666;
+			font-size: 16px;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<h1>Login</h1>
+		<form action="validateEmployee">
+			<label for="customername"><b>Email Id</b></label>
+			<input type="email" placeholder="Enter Email Id" name="empEmail" required>
+
+			<label for="password"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="empPassword" required>
+
+			<button type="submit">Login</button>
+			
+			<button type="button" class="cancelbtn">Cancel</button>
+			
+			<a href="addEmployee.html" class="register">New User? Register</a>
+		</form>
+	</div>
+
+</body>
+</html>

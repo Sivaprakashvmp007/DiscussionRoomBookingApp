@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+  /* Add your CSS styles here */
+  h1 {
+    color: #007bff;
+  }
+
+  label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"], input[type="date"], select {
+    width: 200px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  input[type="submit"], a {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover, a:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+<div>
+  <h1>Book Room</h1>
+  <form action="addBooking">
+    <br>
+    <label>Employee Id</label>
+    <input type="text" name="empId" required>
+    <br>
+    <label>Room Id</label>
+    <input type="text" name="roomId" required>
+    <br>
+    <label>Date</label>
+    <input type="date" name="date" required>
+    <br>
+    <label>Slot</label>
+    <select name="slot">
+      <option >Morning</option>
+      <option >Afternoon</option>
+      <option >Evening</option>
+    </select>
+    <br>
+    <input type="submit" value="Book Room">
+    <a href="index.html">Cancel</a>
+  </form>
+  </div>
+  <div>
+  <form action="updateBooking">
+    <input type="hidden" name="bookingId" required>
+    <br>
+    <label>Employee Id</label>
+    <input type="text" name="empId" required>
+    <br>
+    <label>Room Id</label>
+    <input type="text" name="roomId" required>
+    <br>
+    <label>Date</label>
+    <input type="date" name="date" required>
+    <br>
+    <label>Slot</label>
+    <select name="slot">
+      <option >Morning</option>
+      <option >Afternoon</option>
+      <option >Evening</option>
+    </select>
+    <br>
+    <input type="submit" value="update Booking">
+    <a href="index.html">Cancel</a>
+  </form>
+  </div>
+  <br>
+  <div>
+  <form action="viewAllBooking">
+    <input type="submit" value="View All Booking">
+  </form>
+  </div>
+  <br>
+  <form action="deleteBooking">
+    Delete<input type="number" name="bookingId"><input type="submit" value="Delete Room">
+  </form>
+ 
+</body>
+</html>

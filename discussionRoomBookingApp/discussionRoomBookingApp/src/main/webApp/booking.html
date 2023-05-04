@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Book Room</title>
+  <style>
+    /* Basic CSS styling for the page */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #444;
+    }
+    
+    form {
+      max-width: 500px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #555;
+    }
+    
+    input[type="text"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type="submit"],
+    a {
+      background-color: #008CBA;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type="submit"]:hover,
+    a:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Book Room</h1>
+
+  <form action="addBooking">
+    <br>
+    <label>Employee Id</label>
+    <input type="text" name="empId" required>
+    <br>
+    <label>Room Id</label>
+    <input type="text" name="roomId" required>
+    <br>
+    <label>Date</label>
+    <input type="date" name="date" required>
+    <br>
+    <label>Slot</label>
+    <select name="slot">
+      <option >Morning</option>
+      <option >Afternoon</option>
+      <option >Evening</option>
+    </select>
+    <br>
+    <input type="submit" value="Book Room">
+    <a href="employeeAction.html">Cancel</a>
+  </form>
+</body>
+</html>
