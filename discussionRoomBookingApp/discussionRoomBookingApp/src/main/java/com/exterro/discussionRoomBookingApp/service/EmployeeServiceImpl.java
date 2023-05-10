@@ -50,6 +50,17 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
+	public String sendMail(String empEmail) {
+		List<Employee> employeeList =employeeDao.findByEmail(empEmail);
+		for(Employee employee:employeeList ) {
+			if(employee.getEmpEmail().equals(empEmail)){
+				return "SendEmail";
+			}
+		}
+		return "Invalid";
+		
+	}
+	@Override
 	public String validateEmployee(String empEmail, String empPassword) {
 		
 		List<Employee> employeeList = employeeDao.findByEmailAndPassword(empEmail, empPassword);
@@ -65,6 +76,13 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public boolean employeeLogin(Employee employee) {
 		return employeeDao.equals(employee);
 	}
+	
+	@Override
+	public List<Employee> findByEmail(String empEmail) {
+		
+		return employeeDao.findByEmail(empEmail);
+	}
+	
 
 
 }

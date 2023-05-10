@@ -1,14 +1,23 @@
 package com.exterro.discussionRoomBookingApp;
 
+import java.util.logging.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication
 public class DiscussionRoomBookingAppApplication {
+	
+	//creating logger object
+	private static Logger logger = Logger.getLogger("DiscussionRoomBookingAppApplication");
 
 	public static void main(String[] args) {
-		SpringApplication.run(DiscussionRoomBookingAppApplication.class, args);
-	}
+		//adding try and catch block
+		try {
+			SpringApplication.run(DiscussionRoomBookingAppApplication.class, args);
+		}
 
+		catch (Exception e) {
+			logger.info("error");
+		}
+	}
 }

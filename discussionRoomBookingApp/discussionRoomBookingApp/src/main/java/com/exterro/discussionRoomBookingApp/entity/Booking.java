@@ -81,7 +81,7 @@ public class Booking {
 	public void setSlot(String slot) {
 		this.slot = slot;
 	}
-
+	
 	@Override
 	public String toString() {
 		return "Booking [bookingId=" + bookingId + ", employee=" + empId + ", room=" + roomId + ", date=" + date

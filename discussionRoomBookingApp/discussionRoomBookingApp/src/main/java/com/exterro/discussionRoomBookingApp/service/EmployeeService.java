@@ -15,6 +15,9 @@ public interface EmployeeService {
 	public Employee updateEmployee(Employee Employee);
 	public String deleteEmployee(String empId);
 	
+	public List<Employee> findByEmail(String empEmail);
 	String validateEmployee(String empEmail,String empPassword);
 	public boolean employeeLogin(Employee employee);
+	
+	String sendMail(String empEmail);
 }

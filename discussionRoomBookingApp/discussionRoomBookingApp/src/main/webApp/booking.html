@@ -65,26 +65,31 @@
 <body>
   <h1>Book Room</h1>
 
-  <form action="addBooking">
-    <br>
-    <label>Employee Id</label>
-    <input type="text" name="empId" required>
-    <br>
-    <label>Room Id</label>
-    <input type="text" name="roomId" required>
-    <br>
-    <label>Date</label>
-    <input type="date" name="date" required>
-    <br>
-    <label>Slot</label>
-    <select name="slot">
-      <option >Morning</option>
-      <option >Afternoon</option>
-      <option >Evening</option>
-    </select>
-    <br>
-    <input type="submit" value="Book Room">
-    <a href="employeeAction.html">Cancel</a>
-  </form>
+<form action="addBooking">
+  <br>
+  <label>Employee Id</label>
+  <input type="text" name="empId" required>
+  <br>
+  <label>Room Id</label>
+  <input type="text" name="roomId" required>
+  <br>
+  <label>Date</label>
+  <input type="date" name="date" required>
+  <br>
+  <label>Slot</label>
+  <select name="slot" required>
+    <option value="">-- Select Slot --</option>
+    <option value="Morning">Morning</option>
+    <option value="Afternoon">Afternoon</option>
+    <option value="Evening">Evening</option>
+  </select>
+  <br>
+  <input type="submit" value="Book Room">
+  <a href="employeeAction.html">Cancel</a>
+</form>
+
+
+
+  
 </body>
 </html>
